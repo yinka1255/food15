@@ -128,7 +128,7 @@
 					<div class="row contact-holder">
 						<div class="col-xs-12 col-sm-4 text-center">
 							<h2 class="heading2">Hotline</h2>
-							<a class="sub-title" href="tell:(00)123456789">08119487489</a>
+							<a class="sub-title" href="tell:(00)123456789">08161523473</a>
 						</div>
 						<div class="col-xs-12 col-sm-4 text-center l-bdr">
 							<h2 class="heading2">We’re Open</h2>
@@ -161,33 +161,46 @@
 				<div class="row">
 					
 				</div>
+				<!--
+				<div class="row">
+					<div class="col-md-9">
+					</div>
+					<div class="form-group col-md-3" >
+						<input class="form-control" placeholder="search here..." name="search" id="search" style="background: transparent;" />
+					</div>
+				</div>
+			-->
 				<div class="row">
 					<!-- feature holder of the page -->
 					<div id="feature-holder">
 						<div class="grid-sizer"></div>
 						@foreach ($products as $product)
-						<div class="col-xs-12 col-sm-6 col-md-3 item-col roes">
-							<!-- feature col of the page -->
-							<a href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}" >
-								<div class="feature-col">
-									<div class="img-holder text-center">
-										<img src="{{asset("public/images/".$product->image)}}" alt="image description" class="img-responsive">
-									</div>
-									<div class="info-div" >
-										<h2 class="heading3">{{$product->name}}</h2>
-										<footer class="footer">
-											<ul class="list-unstyled rating-list pull-left">
-												<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
-												<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
-												<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
-												<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
-												<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
-											</ul>
-											<strong class="price pull-right">₦{{$product->price}}</strong>
-										</footer>
-									</div>
+						<div  id="contentDiv">
+							<div class="col-xs-12 col-sm-6 col-md-3 item-col roes ccc">
+								<!-- feature col of the page -->
+								<div >
+									<a href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}" >
+										<div class="feature-col">
+											<div class="img-holder text-center">
+												<img src="{{asset("public/images/".$product->image)}}" alt="image description" class="img-responsive">
+											</div>
+											<div class="info-div" >
+												<h2 class="heading3">{{$product->name}}</h2>
+												<footer class="footer">
+													<ul class="list-unstyled rating-list pull-left">
+														<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+														<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+														<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+														<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+														<li><a href="javascript:void(0);"><i class="fa fa-star"></i></a></li>
+													</ul>
+													<strong class="price pull-right">₦{{$product->price}}</strong>
+												</footer>
+											</div>
+										</div>
+									</a>
 								</div>
-							</a>
+							</div>
 						</div>
 						@endforeach
 					</div>
@@ -245,7 +258,7 @@
 							<ul class="list-unstyled contact-list">
 								<li>Address : No 40 Adeyemi Lawson st off McPherson Ikoyi,<br class="hidden-xs"> Lagos, Nigeria</li>
 								<li>Email: <a href="mailto:info.food15.com">info@food15.com.ng</a></li>
-								 <li>Phone: <a href="tell:08119487489">08119487489</a></li>
+								 <li>Phone: <a href="tell:08161523473">08161523473</a></li>
 							</ul>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-2">
@@ -315,5 +328,16 @@
 	<script src="{{asset('public/js/plugins.js')}}"></script>
 	<!-- include jQuery -->
 	<script src="{{asset('public/js/jquery.main.js')}}"></script>
+
+	<script>
+		$(document).ready(function(){
+		  $("#search").on("keyup", function() {
+			var value = $(this).val().toLowerCase();
+			$("#contentDiv .ccc").filter(function() {
+			  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		  });
+		});
+	</script>
 </body>
 </html>

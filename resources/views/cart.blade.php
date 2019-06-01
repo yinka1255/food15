@@ -223,7 +223,7 @@
 							<ul class="list-unstyled contact-list">
 								<li>Address : No 40 Adeyemi Lawson st off McPherson Ikoyi,<br class="hidden-xs"> Lagos, Nigeria</li>
 								<li>Email: <a href="mailto:info.food15.com">info@food15.com.ng</a></li>
-								 <li>Phone: <a href="tell:08119487489">08119487489</a></li>
+								 <li>Phone: <a href="tell:08161523473">08161523473</a></li>
 							</ul>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-2">
