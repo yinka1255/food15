@@ -169,11 +169,11 @@
 								
 								<div class="form-group">
 									<label class="text-uppercase">EMAIL *</label>
-									<input class="form-control" name="email" type="text">
+									<input class="form-control" name="email" required type="text">
 								</div>
 								<div class="form-group">
 									<label class="text-uppercase">PHONE *</label>
-									<input class="form-control" type="text" >
+									<input class="form-control" name="phone" required type="text" >
 								</div>
 
 								<h2 class="heading3 text-center">CARD DETAILS</h2>
