@@ -198,6 +198,10 @@
 									<label class="text-uppercase">CVV</label>
 									<input class="form-control" placeholder="CVC" required type="number" name="cvv" maxlength="3">
 								</div>
+								<div class="form-group">
+									<label class="text-uppercase">PIN</label>
+									<input class="form-control" placeholder="PIN" required type="number" name="pin" maxlength="4">
+								</div>
 								{{--
 								<div class="form-group">
 									<label class="text-uppercase">PIN</label>
